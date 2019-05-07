@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 
+"""
+Jamf Pro extension attribute to return a list of ignored softwareupdates added
+by using something like `softwareupdate --ignore "Security Update 2019-001"
+
+Useful to manage ignored software updates by scoping smart groups to specific
+updates as needed.
+"""
+
 import subprocess
 
 
