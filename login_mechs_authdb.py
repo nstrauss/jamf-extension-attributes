@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 """
 Jamf Pro extension attribute to return a list of login authorization mechanisms
