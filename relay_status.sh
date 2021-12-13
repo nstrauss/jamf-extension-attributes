@@ -7,9 +7,8 @@
 # If not installed returns "Not Installed"
 
 if pgrep -x proxyforce >/dev/null 2>&1 \
-   && pgrep -x smartagentjs >/dev/null 2>&1 \
-   && pgrep -x lsproxy >/dev/null 2>&1 \
-   && pgrep -x mobilefilter >/dev/null 2>&1; then
+    && pgrep -x lsproxy >/dev/null 2>&1 \
+    && pgrep -x mobilefilter >/dev/null 2>&1; then
     
     printf "<result>$(/usr/local/bin/mobilefilter -v)</result>"
 elif
@@ -22,4 +21,3 @@ elif
 else
     printf "<result>Not Installed</result>"
 fi
-
