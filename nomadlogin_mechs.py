@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 """
 Jamf Pro extension attribute to return a list of NoMAD Login and Jamf Connect 
@@ -16,7 +16,7 @@ def get_login_authdb(format="string"):
         proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, _ = proc.communicate()
         if stdout:
-            return plistlib.readPlistFromString(stdout)
+            return plistlib.loads(stdout)
     except (IOError, OSError):
         pass
 

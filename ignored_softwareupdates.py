@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# Note - This EA is not being updated to Python 3 as `--ignore`` no longer works on newer macOS versions
+
 """
 Jamf Pro extension attribute to return a list of ignored softwareupdates added
 by using something like `softwareupdate --ignore "Security Update 2019-001"
