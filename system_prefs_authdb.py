@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 """
 Jamf Pro extension attribute to return a list of authorization rights
@@ -32,7 +32,7 @@ def get_auth_right(right, format="string"):
         proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, _ = proc.communicate()
         if stdout:
-            return plistlib.readPlistFromString(stdout)
+            return plistlib.loads(stdout)
     except (IOError, OSError):
         pass
 
